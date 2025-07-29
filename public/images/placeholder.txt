@@ -1,0 +1,39 @@
+Esta pasta deve conter as imagens dos presentes da loja InfinitePay:
+
+Cozinha:
+- cafe.jpg (Pó de café pro vício da Aline)
+- jogo-americano.jpg (Jogo americano)
+- toalhas-mesa.jpg (Jogo de toalha de mesa)
+- potes.jpg (Potes e travessas)
+- bebedouro.jpg (Bebedouro d'água)
+
+Decoração:
+- plantas.jpg (Plantas decorativas)
+- quadros.jpg (Quadros decorativos)
+- abajur.jpg (Abajur)
+- tapete.jpg (Tapete)
+- almofadas.jpg (Almofadas)
+- cortina.jpg (Cortina)
+
+Móveis:
+- mesa-cadeira.jpg (Mesa e cadeira)
+- armario.jpg (Armário de cozinha)
+- rack.jpg (Rack estante)
+- puff.jpg (Puff)
+- sofa.jpg (Sofá)
+- guarda-roupa.jpg (Guarda roupa)
+
+Quarto:
+- colchao.jpg (Colchão)
+- travesseiro.jpg (Travesseiro)
+- edredom.jpg (Edredom)
+- colcha.jpg (Colcha)
+- jogo-cama.jpg (Jogo de cama)
+
+Banheiro:
+- jogo-toalha.jpg (Jogo de toalha)
+
+Organização:
+- cesto.jpg (Cesto de roupa)
+
+Por enquanto, você pode usar imagens placeholder ou adicionar suas próprias imagens aqui. 
