@@ -1,4 +1,3 @@
-import React from "react";
 import PresenteCard from "../components/PresenteCard";
 import Header from "../components/Header";
 import "./Lista.css";

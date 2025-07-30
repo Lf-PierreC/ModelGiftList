@@ -1,4 +1,3 @@
-import React from 'react';
 import './PresenteCard.css';
 
 interface Presente {
