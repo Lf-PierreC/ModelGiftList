@@ -1,17 +1,23 @@
-import { useState } from "react";
+import { useState} from "react";
+import type { FormEvent, ChangeEvent } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import './Login.css'
+import './Login.css';
 
-export default function Login({ onLogin, loggedIn }) {
-  const [senha, setSenha] = useState("");
-  const [erro, setErro] = useState(false);
+interface LoginProps {
+  onLogin: (senha: string) => boolean;
+  loggedIn: boolean;
+}
+
+export default function Login({ onLogin, loggedIn }: LoginProps) {
+  const [senha, setSenha] = useState<string>("");
+  const [erro, setErro] = useState<boolean>(false);
   const navigate = useNavigate();
 
   if (loggedIn) {
     return <Navigate to="/admin" />;
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (onLogin(senha)) {
       navigate("/admin");
@@ -28,7 +34,7 @@ export default function Login({ onLogin, loggedIn }) {
           type="password"
           placeholder="Senha"
           value={senha}
-          onChange={(e) => setSenha(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setSenha(e.target.value)}
           required
         />
         <button type="submit">Entrar</button>
