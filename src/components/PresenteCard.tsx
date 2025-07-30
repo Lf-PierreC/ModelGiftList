@@ -35,13 +35,10 @@ export default function PresenteCard({ presente }: PresenteCardProps) {
         <img 
           src={presente.imagem} 
           alt={presente.nome}
-          onError={(e) => {
-            e.currentTarget.src = 'https://via.placeholder.com/400x300/f0f0f0/666666?text=' + encodeURIComponent(presente.nome);
-          }}
         />
       </div>
 
-      <h3>{presente.nome}</h3>
+      <h1>{presente.nome}</h1>
       
       <div className="preco">R$ {presente.preco.toFixed(2)}</div>
       

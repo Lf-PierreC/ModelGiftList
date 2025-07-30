@@ -1,38 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PresenteCard from "../components/PresenteCard";
+import Header from "../components/Header";
 import "./Lista.css";
-
-interface Presente {
-  id: number;
-  nome: string;
-  preco: number;
-  presenteado: boolean;
-  categoria: string;
-  descricao: string;
-  imagem: string;
-}
+import { usePresentes } from "../context/PresenteContext";
 
 export default function Lista() {
-  const [presentes, setPresentes] = useState<Presente[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulando carregamento do JSON
-    const carregarPresentes = async () => {
-      try {
-        const response = await fetch('/src/data/presentes.json');
-        const data = await response.json();
-        setPresentes(data);
-      } catch (error) {
-        console.error('Erro ao carregar presentes:', error);
-        
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    carregarPresentes();
-  }, []);
+  const { presentes, loading } = usePresentes();
 
   if (loading) {
     return (
@@ -43,18 +16,17 @@ export default function Lista() {
   }
 
   return (
-    <div className="lista-container">
-      <div className="presentes-grid">
-        {presentes.map((presente) => (
-          <PresenteCard
-            key={presente.id}
-            presente={presente}
-          />
-        ))}
-      </div>
-
-      <div className="lista-footer">
-        <p>Obrigado por fazer parte do nosso momento especial!</p>
+    <div>
+      <Header />
+      <div className="lista-container">
+        <div className="presentes-grid">
+          {presentes.map((presente) => (
+            <PresenteCard key={presente.id} presente={presente} />
+          ))}
+        </div>
+        <div className="lista-footer">
+          <p>Obrigado por fazer parte do nosso momento especial!</p>
+        </div>
       </div>
     </div>
   );

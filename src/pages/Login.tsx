@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import './Login.css'
 
 export default function Login({ onLogin, loggedIn }) {
   const [senha, setSenha] = useState("");
@@ -20,7 +21,7 @@ export default function Login({ onLogin, loggedIn }) {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="login">
       <h2>Login da Noiva</h2>
       <form onSubmit={handleSubmit}>
         <input

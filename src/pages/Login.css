@@ -1,0 +1,30 @@
+.login {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.login form {
+    width: 20%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.login form button {
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+}
+
+@media screen and (max-width: 768px) {
+    .login form {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login form {
+        width: 50%;
+    }
+}
