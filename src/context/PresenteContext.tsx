@@ -31,7 +31,7 @@ export const PresenteProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   useEffect(() => {
     const carregar = async () => {
       try {
-        const res = await fetch("/src/data/presentes.json");
+        const res = await fetch("/data/presentes.json");
         const data = await res.json();
         setPresentes(data);
       } catch (e) {
