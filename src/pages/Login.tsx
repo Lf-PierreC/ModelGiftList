@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import "./Login.css";
 
-export default function Login({ onLogin, loggedIn }) {
+// Tipagem das props
+interface LoginProps {
+  onLogin: (senha: string) => boolean;
+  loggedIn: boolean;
+}
+
+export default function Login({ onLogin, loggedIn }: LoginProps) {
   const [senha, setSenha] = useState("");
   const [erro, setErro] = useState(false);
   const navigate = useNavigate();
@@ -11,7 +17,7 @@ export default function Login({ onLogin, loggedIn }) {
     return <Navigate to="/admin" />;
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (onLogin(senha)) {
       navigate("/admin");
