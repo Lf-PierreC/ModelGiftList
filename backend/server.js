@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://sua-lista-presentes.netlify.app'] // Substitua pela URL real do Netlify
+    ? ['https://modelgiftlist.netlify.app'] // ✅ seu domínio real no Netlify
     : ['http://localhost:5173', 'http://localhost:3000']
 }));
 app.use(express.json());
