@@ -1,7 +1,7 @@
 // Script de teste para a API
 const http = require('http');
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://giftlist-api-kj59.onrender.com';
 
 // Função helper para fazer requisições HTTP
 function makeRequest(url, options = {}) {
